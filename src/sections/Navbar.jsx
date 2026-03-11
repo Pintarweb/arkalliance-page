@@ -15,9 +15,9 @@ export default function Navbar({ scrolled, navLinks, openContactModal, mobileMen
 
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 nav-item group">
-          <img src="/ark_transparent_logo.png" alt="Ark Alliance" className="h-10 w-auto group-hover:scale-105 transition-transform duration-300" />
-          <div className="font-sans font-bold text-lg tracking-tight">
-            Ark<span className="text-accent">_</span>Alliance
+          <img src="/ark_transparent_logo.png" alt="Ark Alliance" className="h-10 w-auto group-hover:scale-110 transition-transform duration-500 hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.5)]" />
+          <div className="font-sans font-bold text-xl tracking-tighter">
+            ARK<span className="text-accent">ALLIANCE</span>
           </div>
         </a>
 
@@ -27,7 +27,7 @@ export default function Navbar({ scrolled, navLinks, openContactModal, mobileMen
             <a
               key={link.label}
               href={link.href}
-              className="nav-item font-mono text-sm tracking-widest uppercase text-white/60 hover:text-accent transition-colors duration-300 relative group"
+              className="nav-item font-mono text-sm tracking-widest uppercase text-white hover:text-accent transition-colors duration-300 relative group"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300" />

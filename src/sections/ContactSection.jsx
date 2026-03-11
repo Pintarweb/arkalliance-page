@@ -14,7 +14,7 @@ export default function ContactSection({ openContactModal }) {
             <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6">
               Let's build <span className="italic text-accent">together.</span>
             </h2>
-            <p className="text-white/50 text-lg leading-relaxed mb-10">
+            <p className="text-white/60 text-lg leading-relaxed mb-10">
               Ready to future-proof your compliance? Whether you need an enterprise expense engine or a specialised B2B platform, we'd love to talk.
             </p>
             <button onClick={openContactModal} className="cta-button">
@@ -27,22 +27,22 @@ export default function ContactSection({ openContactModal }) {
             <div className="glass-card p-6 flex items-start gap-4">
               <div className="p-2.5 rounded-lg bg-accent/10 text-accent"><Mail className="w-5 h-5" /></div>
               <div>
-                <h4 className="font-sans font-semibold text-sm mb-1">Email</h4>
-                <a href="mailto:hello@arkalliance.com" className="text-white/50 text-sm hover:text-accent transition-colors">hello@arkalliance.com</a>
+                <h4 className="font-sans font-semibold text-sm mb-1 uppercase tracking-wider text-white/80">Email</h4>
+                <a href="mailto:hello@arkalliance.com" className="text-white/60 text-sm hover:text-accent transition-colors">hello@arkalliance.com</a>
               </div>
             </div>
             <div className="glass-card p-6 flex items-start gap-4">
               <div className="p-2.5 rounded-lg bg-accent/10 text-accent"><Phone className="w-5 h-5" /></div>
               <div>
-                <h4 className="font-sans font-semibold text-sm mb-1">Phone</h4>
-                <span className="text-white/50 text-sm">+60 19-655 6243</span>
+                <h4 className="font-sans font-semibold text-sm mb-1 uppercase tracking-wider text-white/80">Phone</h4>
+                <span className="text-white/60 text-sm">+60 19-655 6243</span>
               </div>
             </div>
             <div className="glass-card p-6 flex items-start gap-4">
               <div className="p-2.5 rounded-lg bg-accent/10 text-accent"><MapPin className="w-5 h-5" /></div>
               <div>
-                <h4 className="font-sans font-semibold text-sm mb-1">Office</h4>
-                <span className="text-white/50 text-sm">Kajang, Selangor,<br /> Malaysia</span>
+                <h4 className="font-sans font-semibold text-sm mb-1 uppercase tracking-wider text-white/80">Office</h4>
+                <span className="text-white/60 text-sm">Kajang, Selangor,<br /> Malaysia</span>
               </div>
             </div>
           </div>

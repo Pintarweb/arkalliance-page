@@ -10,9 +10,9 @@ export default {
         primary: '#FFFFFF',
         accent: '#6366F1',
         accentGlow: 'rgba(99, 102, 241, 0.5)',
-        background: '#030712',
-        surface: '#111827',
-        surfaceLight: '#1F2937',
+        background: '#0a0d17',
+        surface: '#121926',
+        surfaceLight: '#1e2638',
         subtle: '#374151',
         emerald: {
           400: '#34D399',

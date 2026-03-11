@@ -13,8 +13,8 @@ import SectionLabel from './SectionLabel';
 function CompliancePillar({ icon: Icon, title, description }) {
   return (
     <div className="glass-card p-8 text-center group hover:border-accent/20 transition-colors">
-      <div className="inline-flex p-4 rounded-2xl bg-accent/5 text-accent mb-6 group-hover:bg-accent/10 transition-colors">
-        <Icon className="w-8 h-8" strokeWidth={1.5} />
+      <div className="inline-flex p-5 rounded-2xl bg-accent/5 text-accent mb-6 group-hover:bg-accent/10 transition-colors">
+        <Icon className="w-12 h-12" strokeWidth={1.2} />
       </div>
       <h4 className="font-display text-xl mb-3">{title}</h4>
       <p className="text-white/40 text-sm leading-relaxed">{description}</p>

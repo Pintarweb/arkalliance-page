@@ -1,17 +1,17 @@
 import React from 'react';
-import { ChevronRight, Receipt, Compass, Plane } from 'lucide-react';
+import { ChevronRight, Receipt, Compass, Plane, Play } from 'lucide-react';
 import SectionLabel from './SectionLabel';
 
 /* ─── Solution Card (local) ─── */
-function SolutionCard({ icon: Icon, title, tagline, description, features, accentColorClass = 'text-accent', index }) {
+function SolutionCard({ icon: Icon, title, tagline, description, features, accentColorClass = 'text-accent', index, link, videoLink }) {
   return (
-    <div className="solution-card glass-card p-8 md:p-10 reveal-section group">
+    <div className="solution-card glass-card p-8 md:p-10 reveal-section group flex flex-col h-full">
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
-        <div className={`p-3 rounded-xl bg-accent/10 ${accentColorClass}`}>
-          <Icon className="w-8 h-8" strokeWidth={1.5} />
+        <div className={`p-4 rounded-xl bg-accent/10 ${accentColorClass}`}>
+          <Icon className="w-12 h-12" strokeWidth={1.2} />
         </div>
-        <span className="font-mono text-xs tracking-wider text-white/30 uppercase">Solution {String.fromCharCode(65 + index)}</span>
+        <span className="font-mono text-xs tracking-wider text-white/60 uppercase">Solution {String.fromCharCode(65 + index)}</span>
       </div>
 
       {/* Title & Tagline */}
@@ -25,13 +25,41 @@ function SolutionCard({ icon: Icon, title, tagline, description, features, accen
 
       {/* Features */}
       {features && features.length > 0 && (
-        <div className="space-y-3 pt-6 border-t border-white/5">
+        <div className={`space-y-3 pt-6 border-t border-white/5 ${link ? 'mb-8' : ''}`}>
           {features.map((feat, i) => (
             <div key={i} className="flex items-center gap-3 text-sm text-white/50 group-hover:text-white/70 transition-colors">
               <ChevronRight className="w-4 h-4 text-accent/60 flex-shrink-0" />
               <span>{feat}</span>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Action Buttons */}
+      {(link || videoLink) && (
+        <div className="mt-auto pt-4 flex flex-wrap gap-4">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/15 hover:border-white/20 hover:text-white transition-all font-mono text-xs tracking-wider uppercase group/btn"
+            >
+              <span>Explore Platform</span>
+              <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform text-accent" />
+            </a>
+          )}
+          {videoLink && (
+            <a
+              href={videoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 hover:bg-accent/20 hover:border-accent/40 text-accent transition-all font-mono text-xs tracking-wider uppercase group/btn shadow-[0_0_20px_rgba(var(--accent-rgb),0.1)]"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              <span>Sneak Peak Demo</span>
+            </a>
+          )}
         </div>
       )}
     </div>
@@ -48,7 +76,7 @@ export default function EcosystemSection() {
           <h2 className="font-display text-4xl md:text-6xl leading-tight mb-4">
             The Ark Alliance <span className="italic text-accent">Ecosystem.</span>
           </h2>
-          <p className="text-white/40 text-lg max-w-3xl">
+          <p className="text-white/70 text-lg max-w-3xl">
             We engineer high-precision platforms that solve complex friction points in compliance, global trade, and specialized tourism — built on Privacy by Design, AI-driven validation, and Regulatory Readiness.
           </p>
         </div>
@@ -67,6 +95,7 @@ export default function EcosystemSection() {
             ]}
             accentColorClass="text-accent"
             index={0}
+            link="https://claim-jet.vercel.app/"
           />
           <SolutionCard
             icon={Compass}
@@ -80,6 +109,7 @@ export default function EcosystemSection() {
             ]}
             accentColorClass="text-emerald-400"
             index={1}
+            videoLink="/compress_Demo_B2B.mp4"
           />
           <SolutionCard
             icon={Plane}
@@ -93,6 +123,7 @@ export default function EcosystemSection() {
             ]}
             accentColorClass="text-amber-400"
             index={2}
+            link="https://www.feeljapanwithk.com/"
           />
         </div>
       </div>
